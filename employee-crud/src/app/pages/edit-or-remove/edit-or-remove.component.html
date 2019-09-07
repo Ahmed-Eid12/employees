@@ -1,0 +1,51 @@
+<div class="navbar">
+    <div class="logo" [routerLink]="['/']">EMPLOYEES</div>
+    <div class="about">
+        <ul>
+            <li [routerLink]="['/employees']">All Users</li>
+            <li [routerLink]="['/about']">About</li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <p>that section for edit or remove user information .</p>
+    <p>Do you want to edit or remove that User?</p>
+    
+    <form [formGroup]="formGroup">
+        <!-- <div class="form-group">
+            <input formControlName="id" disabled type="number" class="form-control" placeholder="id">
+        </div> -->
+        <div class="form-group">
+            <input formControlName="userName" type="text" class="form-control" placeholder="User Name">
+        </div>
+        <div class="form-group">
+            <input formControlName="firstName" type="text" class="form-control" placeholder="First Name">
+        </div>
+        <div class="form-group">
+            <input formControlName="lastName" type="text" class="form-control" placeholder="Last Name">
+        </div>
+
+        <button class="btn btn-light" (click)="changedPassword()">Change Password</button> 
+        <a *ngIf="changePassword == true" (click)="doNotChange()"><span>no thanks</span></a>
+
+        <div class="form-group" *ngIf="changePassword == true">
+            <input formControlName="password" type="password" class="form-control" placeholder="Password">
+        </div>
+        <div class="form-group" *ngIf="changePassword == true">
+            <input formControlName="confirmPassword" type="password" placeholder="Confirm Password" class="form-control">
+        </div>
+        <p *ngIf="formGroup.get('password').value != formGroup.get('confirmPassword').value">password not matched</p>
+        <div class="form-group">
+            <input formControlName="email" type="email" class="form-control" placeholder="Email">
+        </div>
+        <p *ngIf="!formGroup.valid">please all fields required</p>
+        <p>{{messages}}</p>
+    </form>
+    <div class="button" style="text-align: center">
+        <button class="btn btn-lg btn-info" (click)="edit()">Edit User</button>
+        <button class="btn btn-danger" (click)="removeUser()">Remove</button>
+    </div>
+    
+</div>
+

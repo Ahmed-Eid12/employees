@@ -1,0 +1,79 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    top: 100px;
+    .content{
+        text-align: center;
+        border: 1px solid rgb(28, 127, 192);
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgb(170, 169, 169);
+    }
+    img{
+        width: 100px;
+    }
+    .in-group{
+        width: 350px;
+        border: 1px solid rgb(28, 127, 192);;
+        border-radius: 50px;
+        padding: 10px 20px;
+        outline: none;
+        margin-top: 10px;
+    }
+    .in-group:focus{
+        box-shadow:  0 0 15px rgb(28, 127, 192);
+    }
+    h1{
+        color: rgb(0, 132, 255)
+    }
+    .formGroups{
+        position: relative;
+        .btnss{
+            padding: 15px 40px;
+            border: none;
+            border-radius: 40px;
+            background-color: rgb(28, 127, 192);
+            color: white;
+            font-weight: bold;
+            outline: none;
+            margin-top: 20px;
+            &:hover{
+                background-color: rgb(68, 146, 199);
+            }
+        }
+        .p-error{
+            position: absolute;
+            border: 1px solid rgb(187, 117, 117);
+            left: -210px;
+            top: 15px;
+            padding: 5px 20px;
+            background-color: aliceblue;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        .p-length{
+            position: absolute;
+            border: 1px solid rgb(187, 117, 117);
+            right: -280px;
+            top: 15px;
+            padding: 5px 20px;
+            background-color: aliceblue;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        .ng-touched.ng-invalid{
+            border: 1px solid red;
+        }
+    }  
+    small{
+        a{
+            text-decoration: none;
+            cursor: pointer;
+            &:hover{
+                color: rgb(68, 146, 199);
+            }
+        }
+    }
+}

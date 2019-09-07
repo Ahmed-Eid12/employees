@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+.container{
+    .image{
+        text-align: center;
+        // text-align: center;
+        background-image: url('/assets/1.jpg');
+        height: 70vh;
+        background-size: cover;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background-color: rgba(2, 0, 34, 0.7);
+            // background-color: rgba(22,174,149, .5);
+        }
+        h1{
+            color: white;
+            font-weight: bold;
+            z-index: 9;
+            position: relative;
+            top: 40%;
+            padding: 20px;
+            border: 1px chocolate solid;
+            border-radius: 10px;
+            display: inline-block;
+        }
+    }
+}

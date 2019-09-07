@@ -1,0 +1,47 @@
+$color-one : #F61F38;
+$color-two : #E2001A;
+$color-three : #AF0014;
+$color-four : #16AE95;
+$color-five : #00957C;
+.content{
+    background-color: $color-one;
+    a{
+        color: white;
+        padding: 10px;
+        margin-left: 10px;
+        font-size: 30px;
+        text-decoration: none;
+        outline: none;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    border: none;
+    border-radius: 5px;
+}
+
+/** here decoration of navbar */
+
+.navbar{
+    .logo{
+        font-weight: bold;
+        font-size: 40px;
+        color: $color-five;
+    }
+    .about{
+        ul{
+            list-style: none;
+            display: flex;
+            margin-right: 20px;
+            li{
+                padding: 10px 15px;
+                margin: 10px;
+                border: none;
+                font-weight: bold;
+                color: $color-three;
+                cursor: pointer;
+                outline: none;
+            }
+        }
+    }
+    
+}

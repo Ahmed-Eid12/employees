@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="content">
+        <div class="header-content">
+            <h1>Register</h1>
+        </div>
+        <form [formGroup]="formGroup" class="form-group">
+            <div class="formGroup">
+                <input type="text" formControlName='userName' class="form-control edit" placeholder="User Name">
+                <p></p>
+            </div>
+            <div class="formGroup">
+                <input formControlName='firstName' type="text" class="form-control" placeholder="First Name">
+                <p></p>
+            </div>
+            <div class="formGroup">
+                <input formControlName='lastName' type="text" class="form-control" placeholder="Last Name">
+                <p></p>
+            </div>
+            <div class="formGroup">
+                <input formControlName='email' type="email" class="form-control" placeholder="asim@gmail.com">
+                <p></p>
+                <p *ngIf="formGroup.get('email').errors?.pattern">The email address must contain at least the @ character</p>
+                <p *ngIf="formGroup.get('email').errors?.emailDomain">must end with domain gmail.com</p>
+                <p>{{error}}</p>
+                <!-- <p>{{emailError}}</p> -->
+            </div>
+            <div class="formGroup" style="margin-bottom: 10px">
+                <input formControlName='password' type="password" class="form-control" placeholder="Password">
+                <p *ngIf="formGroup.get('password').errors?.minlength">minimum length(5)</p>
+            </div>
+            <div class="formGroup" style="margin-bottom: 10px">
+                <input [class.not-active]="formGroup.get('password').value !== formGroup.get('confirmPassword').value"  formControlName='confirmPassword' type="password" class="form-control" placeholder="Confirm Password">
+                <p *ngIf="formGroup.get('confirmPassword').errors?.minlength">minimum length(5)</p>
+                <p *ngIf="formGroup.get('password').value !== formGroup.get('confirmPassword').value">not matched password</p>
+            </div>
+            <div class="formGroup">
+                <input type="submit" class="btnss" (click)="register()" value="Register">
+            </div>
+            <p>{{messages}}</p>
+        </form>
+        <small>you can <a [routerLink]="['/login']">login</a> new</small>
+    </div>
+</div>
+<div class="container">
+    <div class="back">
+        <small>back to <a [routerLink]="['/']">Home</a></small>
+    </div>
+</div>

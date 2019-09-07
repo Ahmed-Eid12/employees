@@ -1,0 +1,66 @@
+$color-one : #F61F38;
+$color-two : #E2001A;
+$color-three : #AF0014;
+$color-four : #16AE95;
+$color-five : #00957C;
+
+.navbar{
+    .logo{
+        font-weight: bold;
+        font-size: 40px;
+        color: $color-five;
+        cursor: pointer;
+    }
+    .about{
+        ul{
+            list-style: none;
+            display: flex;
+            margin-right: 20px;
+            li{
+                padding: 10px 15px;
+                margin: 10px;
+                border: none;
+                font-weight: bold;
+                color: $color-three;
+                cursor: pointer;
+                outline: none;
+            }
+        }
+    }
+    
+}
+.button{
+    .btn{
+        width: 150px;
+        margin-left: 15px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+.btn-light{
+    margin-bottom: 10px;
+}
+a{
+    margin-left: 10px;
+    cursor: pointer;
+    &span:hover{
+        color: rgb(78, 153, 153)
+    }
+}
+.list-group{
+    li:first-child{
+        font-weight: bold; 
+    }
+    li:nth-child(2){
+        color: #00957C;
+        font-weight: bold;
+    }
+    li:nth-child(3){
+        color: #00957C;
+        font-weight: bold;
+    }
+    li:nth-child(4){
+        color: #00957C;
+        font-weight: bold;
+    }
+}

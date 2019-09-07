@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="content">
+        <div class="header-content">
+            <h1>Login</h1>
+            <img src="assets/user.png">
+        </div>
+        <form [formGroup]="formGroup">
+            <div class="formGroups">
+                <input formControlName='email' type="text" class="in-group" placeholder="Email">
+                <p class="p-error" *ngIf="formGroup.get('email').touched && formGroup.get('email').errors?.required">user name is required</p>
+            </div>
+            <div class="formGroups">
+                <input formControlName='password' type="password" class="in-group" placeholder="Password">
+                <p class="p-error" *ngIf="formGroup.get('password').touched && formGroup.get('password').errors?.required">password is required</p>
+
+                <!-- for  max length  -->
+                <p class="p-length" *ngIf="formGroup.get('password').errors?.minlength">sorry your minimum length (5)</p>
+            </div>
+            <div class="formGroups">
+                <input type="submit" (click)="login()" class="btnss" value="Login">
+            </div>
+        </form>
+        <small><a>Forget Password</a></small><br>
+        <small>you can <a [routerLink]="['/register']">register</a> for new user</small>
+    </div>
+</div>
+<div class="container">
+    <div class="back" style="text-align: right">
+        <small>back to <a [routerLink]="['/']">Home</a></small>
+    </div>
+</div>

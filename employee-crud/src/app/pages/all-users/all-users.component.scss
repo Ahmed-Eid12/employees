@@ -1,0 +1,32 @@
+$color-one : #F61F38;
+$color-two : #E2001A;
+$color-three : #AF0014;
+$color-four : #16AE95;
+$color-five : #00957C;
+.container{
+    margin-top: 50px;
+}
+.navbar{
+    .logo{
+        font-weight: bold;
+        font-size: 40px;
+        color: $color-five;
+    }
+    .about{
+        ul{
+            list-style: none;
+            display: flex;
+            margin-right: 20px;
+            li{
+                padding: 10px 15px;
+                margin: 10px;
+                border: none;
+                font-weight: bold;
+                color: $color-three;
+                cursor: pointer;
+                outline: none;
+            }
+        }
+    }
+    
+}

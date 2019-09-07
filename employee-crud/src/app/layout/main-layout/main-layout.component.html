@@ -1,0 +1,20 @@
+<div class="content">
+    <a [routerLink]="['/login']">Login</a>
+    <a [routerLink]="['/register']">Register</a>
+</div>
+<div class="navbar">
+    <div class="logo">EMPLOYEES</div>
+    <div class="about">
+        <ul>
+            <li [routerLink]="['/employees']">All Users</li>
+            <li [routerLink]="['/about']">About</li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <div class="image">
+        <h1>EMPLOYEES</h1>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
